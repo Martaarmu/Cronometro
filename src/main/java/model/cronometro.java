@@ -102,6 +102,7 @@ public class cronometro implements Runnable {
 		// TODO Auto-generated method stub
 
 		while (!this.suspendido.getSuspendido()) {
+			
 			Platform.runLater(() -> {
 				segundo.set(segundo.get() + 1);
 				if(segundo.get()<10) {
@@ -124,7 +125,7 @@ public class cronometro implements Runnable {
 					tiempo_segundo.set(segundo.get()+"0");
 				});
 
-				if (minuto.get() == 60) {
+				if (minuto.get() == 59) {
 					Platform.runLater(() -> {
 						minuto.set(0);
 						tiempo_minuto.set(minuto.get()+"");

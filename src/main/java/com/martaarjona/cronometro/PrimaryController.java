@@ -34,12 +34,12 @@ public class PrimaryController {
 		this.label_segundo.textProperty().bind(c.getTiempo_segundo());
 		this.label_minuto.textProperty().bind(c.getTiempo_minuto());
 		this.label_hora.textProperty().bind(c.getTiempo_hora());
-		
 	}
 
 	@FXML
 	void iniciar(ActionEvent event) {
-
+		
+		c.getSuspendido().setSuspendido(false);
 		t = new Thread(c);
 		t.start();
 

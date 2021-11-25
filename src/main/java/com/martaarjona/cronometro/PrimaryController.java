@@ -31,6 +31,7 @@ public class PrimaryController {
 
 	@FXML
 	void initialize() {
+		this.btn_parar.setDisable(true);
 		this.label_segundo.textProperty().bind(c.getTiempo_segundo());
 		this.label_minuto.textProperty().bind(c.getTiempo_minuto());
 		this.label_hora.textProperty().bind(c.getTiempo_hora());
@@ -46,6 +47,8 @@ public class PrimaryController {
 		this.label_segundo.textProperty().bind(c.getTiempo_segundo());
 		this.label_minuto.textProperty().bind(c.getTiempo_minuto());
 		this.label_hora.textProperty().bind(c.getTiempo_hora());
+		
+		this.btn_parar.setDisable(false);
 
 		this.btn_iniciar.setDisable(true);
 		this.btn_iniciar.setText("CONTANDO");
@@ -80,6 +83,8 @@ public class PrimaryController {
 		this.btn_iniciar.setDisable(false);
 		this.btn_iniciar.setText("INICIAR");
 		this.btn_parar.setText("PARAR");
+		this.btn_parar.setDisable(true);
+		
 	}
 
 }

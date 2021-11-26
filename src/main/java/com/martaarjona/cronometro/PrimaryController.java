@@ -29,14 +29,22 @@ public class PrimaryController {
 	cronometro c = new cronometro();
 	Thread t = new Thread();
 
+	/**
+	 * Método que inicializa la escena
+	 */
 	@FXML
 	void initialize() {
+		
 		this.btn_parar.setDisable(true);
 		this.label_segundo.textProperty().bind(c.getTiempo_segundo());
 		this.label_minuto.textProperty().bind(c.getTiempo_minuto());
 		this.label_hora.textProperty().bind(c.getTiempo_hora());
 	}
-
+	
+	/**
+	 * Método que se ejecutará cuando se pulse el BOTÓN INICIAR
+	 * @param event
+	 */
 	@FXML
 	void iniciar(ActionEvent event) {
 		
@@ -52,11 +60,13 @@ public class PrimaryController {
 
 		this.btn_iniciar.setDisable(true);
 		this.btn_iniciar.setText("CONTANDO");
-		
-		
 
 	}
-
+	
+	/**
+	 * Método que se ejecutará cuando se pulse el BOTÓN PARAR
+	 * @param event
+	 */
 	@FXML
 	void parar(ActionEvent event) {
 		
@@ -74,7 +84,10 @@ public class PrimaryController {
 		
 
 	}
-
+	/**
+	 * Método que se ejecutará cuando se pulse el BOTÓN REINICIAR
+	 * @param event
+	 */
 	@FXML
 	void reiniciar(ActionEvent event) {
 

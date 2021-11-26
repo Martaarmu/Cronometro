@@ -97,6 +97,9 @@ public class cronometro implements Runnable {
 		this.suspendido = suspendido;
 	}
 
+	/**
+	 * Se ejecutará cada vez que ejecutemos un hilo 
+	 */
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
